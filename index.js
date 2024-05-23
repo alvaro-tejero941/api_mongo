@@ -31,7 +31,7 @@ servidor.post("/nuevo", async (peticion,respuesta) => {
     }
 });
 
-servidor.delete("/colores/borrar/:id([0-9]+)", async (peticion,respuesta) => {
+servidor.delete("/colores/borrar/:id([0-9abcdef]24)", async (peticion,respuesta) => {
     try{
         let count = await borrarColor(peticion.params.id);
         console.log(peticion.params.id);
